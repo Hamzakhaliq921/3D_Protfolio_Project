@@ -170,4 +170,16 @@ h1.hero-title span{
   margin-left:3px;
   animation:blink 0.9s step-end infinite;
 }
+@keyframes blink{
+  0%,100%{ opacity:1; }
+  50%{ opacity:0; }
+}
+
+.hero-desc{
+  font-size:16px;
+  color:var(--text-muted);
+  line-height:1.7;
+  margin-bottom:36px;
+  max-width:460px;
+}
 
