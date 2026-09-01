@@ -38,3 +38,10 @@ body{
     radial-gradient(2px 2px at 10% 65%, rgba(255,255,255,0.2), transparent);
   background-repeat:no-repeat;
 }
+.glow-orb{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(90px);
+  pointer-events:none;
+  z-index:0;
+}
