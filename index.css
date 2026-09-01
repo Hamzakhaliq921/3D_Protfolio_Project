@@ -139,4 +139,11 @@ nav{
   0%,100%{ opacity:1; transform:scale(1); }
   50%{ opacity:.5; transform:scale(0.8); }
 }
+h1.hero-title{
+  font-size:52px;
+  font-weight:700;
+  line-height:1.15;
+  color:var(--text-main);
+  margin-bottom:22px;
+}
 
