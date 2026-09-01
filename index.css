@@ -63,3 +63,9 @@ nav{
   justify-content:space-between;
   padding:28px 64px;
 }
+.logo{
+  font-weight:800;
+  font-size:20px;
+  letter-spacing:1px;
+  color:var(--violet-light);
+}
