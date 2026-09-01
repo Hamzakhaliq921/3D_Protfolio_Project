@@ -146,4 +146,11 @@ h1.hero-title{
   color:var(--text-main);
   margin-bottom:22px;
 }
+h1.hero-title span{
+  color:var(--violet-light);
+  background:linear-gradient(90deg, var(--violet-light), var(--violet));
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
 
