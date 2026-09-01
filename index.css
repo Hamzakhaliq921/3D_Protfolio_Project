@@ -10,3 +10,12 @@
   --border:rgba(139,92,246,0.25);
   --green:#34d399;
 }
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html,body{
+  background:var(--bg);
+  color:var(--text-main);
+  font-family:'Poppins',sans-serif;
+  overflow-x:hidden;
+}
