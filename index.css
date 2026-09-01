@@ -85,3 +85,17 @@ nav{
   position:relative;
   transition:color .25s ease;
 }
+
+.nav-links a:hover{ color:var(--text-main); }
+
+.nav-links a.active{
+  color:var(--text-main);
+}
+.nav-links a.active::after{
+  content:'';
+  position:absolute;
+  left:0; right:0; bottom:-8px;
+  height:2px;
+  background:var(--violet);
+  border-radius:2px;
+}
