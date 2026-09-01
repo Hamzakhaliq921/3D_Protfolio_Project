@@ -208,4 +208,13 @@ h1.hero-title span{
   color:#fff;
   box-shadow:0 8px 24px rgba(139,92,246,0.35);
 }
+.btn-outline{
+  background:var(--pill-bg);
+  border:1px solid var(--border);
+  color:var(--text-main);
+}
+
+.btn-outline:hover{
+  border-color:var(--violet);
+}
 
