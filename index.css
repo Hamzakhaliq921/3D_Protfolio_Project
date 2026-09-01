@@ -229,3 +229,9 @@ h1.hero-title span{
   color:var(--violet-light);
   margin-bottom:4px;
 }
+.stat p{
+  font-size:12px;
+  letter-spacing:1px;
+  color:var(--text-muted);
+  text-transform:uppercase;
+}
