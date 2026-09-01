@@ -99,3 +99,18 @@ nav{
   background:var(--violet);
   border-radius:2px;
 }
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+  padding:40px 64px 80px;
+  min-height:calc(100vh - 96px);
+}
+
+.hero-left{
+  max-width:560px;
+}
