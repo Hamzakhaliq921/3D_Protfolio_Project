@@ -69,3 +69,19 @@ nav{
   letter-spacing:1px;
   color:var(--violet-light);
 }
+
+
+.nav-links{
+  display:flex;
+  gap:36px;
+  list-style:none;
+}
+
+.nav-links a{
+  color:var(--text-muted);
+  text-decoration:none;
+  font-size:15px;
+  font-weight:500;
+  position:relative;
+  transition:color .25s ease;
+}
