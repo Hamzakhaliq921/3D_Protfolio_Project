@@ -153,4 +153,13 @@ h1.hero-title span{
   background-clip:text;
   -webkit-text-fill-color:transparent;
 }
+.typing-wrap{
+  font-size:26px;
+  font-weight:500;
+  color:var(--violet-light);
+  margin-bottom:26px;
+  min-height:36px;
+  display:flex;
+  align-items:center;
+}
 
