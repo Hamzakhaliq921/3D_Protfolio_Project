@@ -182,4 +182,10 @@ h1.hero-title span{
   margin-bottom:36px;
   max-width:460px;
 }
+.cta-row{
+  display:flex;
+  gap:16px;
+  margin-bottom:52px;
+  flex-wrap:wrap;
+}
 
