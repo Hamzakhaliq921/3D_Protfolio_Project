@@ -218,3 +218,14 @@ h1.hero-title span{
   border-color:var(--violet);
 }
 
+.stats-row{
+  display:flex;
+  gap:48px;
+}
+
+.stat h3{
+  font-size:28px;
+  font-weight:700;
+  color:var(--violet-light);
+  margin-bottom:4px;
+}
