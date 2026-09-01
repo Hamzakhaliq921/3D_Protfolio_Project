@@ -201,3 +201,11 @@ h1.hero-title span{
   transition:transform .2s ease, box-shadow .2s ease;
 }
 
+.btn:hover{ transform:translateY(-2px); }
+
+.btn-primary{
+  background:linear-gradient(90deg, var(--violet-deep), var(--violet));
+  color:#fff;
+  box-shadow:0 8px 24px rgba(139,92,246,0.35);
+}
+
