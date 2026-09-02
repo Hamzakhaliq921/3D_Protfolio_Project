@@ -536,4 +536,6 @@ h2.stack-title span{
   h2.stack-title{ font-size:30px; }
 }
 
-
+@media (min-width: 1001px) and (max-width: 1300px){
+  .stack-grid{ grid-template-columns:repeat(2, 1fr); }
+}
