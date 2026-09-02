@@ -315,5 +315,13 @@ h1.hero-title span{
   cursor:pointer;
   transition:transform .2s ease, background .2s ease;
 }
+.sound-indicator:hover{
+  transform:translateX(-50%) scale(1.08);
+  background:rgba(139,92,246,0.35);
+}
+
+.sound-indicator.pulsing{
+  animation:soundPulse 1.6s ease-in-out infinite;
+}
 
 
