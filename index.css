@@ -323,5 +323,9 @@ h1.hero-title span{
 .sound-indicator.pulsing{
   animation:soundPulse 1.6s ease-in-out infinite;
 }
+@keyframes soundPulse{
+  0%,100%{ box-shadow:0 0 0 0 rgba(139,92,246,0.55); }
+  50%{ box-shadow:0 0 0 8px rgba(139,92,246,0); }
+}
 
 
