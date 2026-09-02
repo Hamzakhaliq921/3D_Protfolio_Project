@@ -381,6 +381,16 @@ h1.hero-title span{
 .stack-header{
   max-width:560px;
 }
+/* smaller avatar circle used inside the Tech Stack section */
+.avatar-wrap{
+  position:relative;
+  width:260px;
+  height:260px;
+  flex-shrink:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 
 
 
