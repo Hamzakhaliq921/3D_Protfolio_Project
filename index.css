@@ -502,5 +502,15 @@ h2.stack-title span{
   flex-wrap:wrap;
   gap:8px;
 }
+.pill{
+  background:var(--pill-bg);
+  border:1px solid var(--border);
+  color:var(--text-muted);
+  font-size:13px;
+  font-weight:500;
+  padding:6px 13px;
+  border-radius:999px;
+  transition:color .2s ease, border-color .2s ease;
+}
 
 
