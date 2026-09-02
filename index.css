@@ -402,5 +402,15 @@ h1.hero-title span{
   padding:0 24px;
 }
 
+.avatar-wrap .avatar-placeholder svg{
+  width:36px;height:36px;
+}
+
+.avatar-wrap .sound-indicator{
+  width:32px;
+  height:32px;
+  bottom:14px;
+}
+
 
 
