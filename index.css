@@ -512,5 +512,8 @@ h2.stack-title span{
   border-radius:999px;
   transition:color .2s ease, border-color .2s ease;
 }
+.stack-card:hover .pill{
+  color:var(--text-main);
+}
 
 
