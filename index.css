@@ -438,6 +438,20 @@ h1.hero-title span{
   font-weight:600;
   margin-bottom:20px;
 }
+h2.stack-title{
+  font-size:40px;
+  font-weight:700;
+  line-height:1.2;
+  color:var(--text-main);
+  margin-bottom:14px;
+}
+
+h2.stack-title span{
+  background:linear-gradient(90deg, var(--violet-light), var(--violet));
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
 
 
 
