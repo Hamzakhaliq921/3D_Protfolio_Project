@@ -412,5 +412,17 @@ h1.hero-title span{
   bottom:14px;
 }
 
+.avatar-wrap .sound-indicator svg{ width:14px; height:14px; }
+
+.avatar-wrap .sound-hint{
+  bottom:52px;
+  font-size:11px;
+  padding:5px 10px;
+}
+
+.avatar-wrap .float-dot.a{ top:2%; right:0%; }
+.avatar-wrap .float-dot.b{ bottom:8%; left:2%; }
+.avatar-wrap .float-dot.c{ top:10%; right:16%; }
+
 
 
