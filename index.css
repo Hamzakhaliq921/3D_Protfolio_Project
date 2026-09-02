@@ -297,5 +297,23 @@ h1.hero-title span{
   width:48px;height:48px;
   opacity:.6;
 }
+.sound-indicator{
+  position:absolute;
+  bottom:22px;
+  left:50%;
+  transform:translateX(-50%);
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:rgba(20,17,32,0.85);
+  border:1px solid rgba(255,255,255,0.15);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:4;
+  backdrop-filter:blur(6px);
+  cursor:pointer;
+  transition:transform .2s ease, background .2s ease;
+}
 
 
