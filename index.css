@@ -516,6 +516,7 @@ h2.stack-title span{
   color:var(--text-main);
 }
 
+/* ---------- Responsive ---------- */
 @media (max-width: 1000px){
   nav{ padding:20px 24px; }
   .nav-links{ display:none; }
