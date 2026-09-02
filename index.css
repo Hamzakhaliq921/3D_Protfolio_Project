@@ -270,3 +270,32 @@ h1.hero-title span{
   z-index:2;
   cursor:pointer;
 }
+.avatar-frame video,
+.avatar-frame img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:50% 50%;
+  display:block;
+}
+
+.avatar-placeholder{
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  color:var(--text-muted);
+  font-size:14px;
+  text-align:center;
+  padding:0 40px;
+}
+
+.avatar-placeholder svg{
+  width:48px;height:48px;
+  opacity:.6;
+}
+
+
