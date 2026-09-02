@@ -364,5 +364,11 @@ h1.hero-title span{
   0%,100%{ transform:translateY(0px); }
   50%{ transform:translateY(-14px); }
 }
+/* ---------- Tech Stack Section ---------- */
+.stack-section{
+  position:relative;
+  z-index:2;
+  padding:100px 64px 120px;
+}
 
 
