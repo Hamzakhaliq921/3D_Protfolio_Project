@@ -453,5 +453,31 @@ h2.stack-title span{
   -webkit-text-fill-color:transparent;
 }
 
+.stack-sub{
+  font-size:16px;
+  color:var(--text-muted);
+  line-height:1.7;
+}
+
+.stack-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:24px;
+}
+
+.stack-card{
+  background:var(--bg-panel);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:28px 26px;
+  transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.stack-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(139,92,246,0.55);
+  box-shadow:0 12px 30px rgba(139,92,246,0.15);
+}
+
 
 
