@@ -347,4 +347,14 @@ h1.hero-title span{
   transition:opacity .3s ease;
 }
 
+.sound-hint.show{ opacity:1; }
+
+.float-dot{
+  position:absolute;
+  border-radius:50%;
+  background:var(--violet-light);
+  box-shadow:0 0 10px var(--violet-light);
+  z-index:1;
+}
+
 
