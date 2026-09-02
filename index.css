@@ -391,6 +391,16 @@ h1.hero-title span{
   align-items:center;
   justify-content:center;
 }
+.avatar-wrap .avatar-frame{
+  width:240px;
+  height:240px;
+}
+
+.avatar-wrap .avatar-placeholder{
+  font-size:12px;
+  gap:8px;
+  padding:0 24px;
+}
 
 
 
