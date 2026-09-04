@@ -1,250 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark" data-color="purple">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hamza Khaliq | Portfolio</title>
+<title>Hamza Khaliq | Software Eng Student & Full-Stack Application Developer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="index.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="stars"></div>
-<div class="glow-orb one"></div>
-<div class="glow-orb two"></div>
+<!-- HTML5 Interactive Background Canvas Particles -->
+<canvas id="bgParticlesCanvas"></canvas>
 
-<nav>
-  <div class="logo">HK</div>
-  <ul class="nav-links">
-    <li><a href="#" class="active">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#">Services</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-</nav>
+<!-- Custom Mouse Skill Trail Container -->
+<div id="skillMouseTrail" aria-hidden="true"></div>
 
-<section class="hero">
-  <div class="hero-left">
-    <div class="badge"><span class="dot"></span> Available for Work</div>
+<!-- Ambient background glow Orbs -->
+<div class="ambient-glow one"></div>
+<div class="ambient-glow two"></div>
+<div class="ambient-glow three"></div>
 
-    <h1 class="hero-title">Hi, I'm <span>Hamza Khaliq</span></h1>
+<!-- Header & Floating Pill Navbar with Theme Switcher -->
+<header class="header-container">
+  <nav class="floating-nav" id="mainNav">
+    <a href="#" class="logo-link">
+      <span class="logo-text">Hamza<span class="logo-dot">.</span></span>
+    </a>
+    
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#" class="nav-link active">Home</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
 
-    <div class="typing-wrap">
-      <span id="typed-text"></span><span class="cursor"></span>
-    </div>
+    <div class="nav-right-controls">
+      <!-- Theme & Color Picker Control -->
+      <div class="theme-control-widget">
+        <button class="theme-toggle-btn" id="themeModeToggle" aria-label="Toggle Light/Dark Theme" title="Toggle Light/Dark Mode">
+          <span class="theme-icon-dark">🌙</span>
+          <span class="theme-icon-light" style="display:none">☀️</span>
+        </button>
 
-    <p class="hero-desc">Building intelligent solutions and interactive experiences from ideas.</p>
-
-    <div class="cta-row">
-      <a href="#" class="btn btn-primary">Explore My Work</a>
-      <a href="#" class="btn btn-outline">View Projects</a>
-      <a href="#" class="btn btn-outline">Contact Me</a>
-    </div>
-
-    <div class="stats-row">
-      <div class="stat">
-        <h3>9+</h3>
-        <p>Projects</p>
-      </div>
-      <div class="stat">
-        <h3>AI/ML</h3>
-        <p>Focus</p>
-      </div>
-      <div class="stat">
-        <h3>BS AI</h3>
-        <p>Undergraduate</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero-right">
-    <div class="ring-glow"></div>
-    <div class="float-dot a"></div>
-    <div class="float-dot b"></div>
-    <div class="float-dot c"></div>
-
-    <div class="avatar-block">
-      <div class="avatar-frame">
-        <video class="avatar-video" playsinline preload="auto">
-          <source src="avatar-circle-v4 (4).mp4" type="video/mp4">
-        </video>
-
-        <div class="avatar-placeholder">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>
-          Add your Intro.mp4 file in this folder to show your video here
-        </div>
-      </div>
-
-      <div class="sound-hint">Tap for sound</div>
-      <div class="sound-indicator" title="Tap for sound" role="button" tabindex="0" aria-label="Toggle sound">
-        <svg class="sound-icon-on" viewBox="0 0 24 24" style="display:none"><path d="M5 9v6h4l5 5V4L9 9H5zM16.5 12c0-1.77-1-3.29-2.5-4.03v8.06c1.5-.74 2.5-2.26 2.5-4.03zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-        <svg class="sound-icon-off" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.8L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="stack-section" id="skills">
-  <div class="stack-top">
-    <div class="stack-header">
-      <div class="stack-badge">Skills &amp; Expertise</div>
-      <h2 class="stack-title">My <span>Tech Stack</span></h2>
-      <p class="stack-sub">Technologies and tools I use to bring ideas to life.</p>
-    </div>
-
-    <div class="avatar-wrap">
-      <div class="ring-glow"></div>
-      <div class="float-dot a"></div>
-      <div class="float-dot b"></div>
-      <div class="float-dot c"></div>
-
-      <div class="avatar-block" data-scroll-trigger>
-        <div class="avatar-frame">
-          <video class="avatar-video" playsinline preload="auto">
-            <source src="avatar-circle-v4 (4).mp4" type="video/mp4">
-          </video>
-
-          <div class="avatar-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>
-            Add your Intro.mp4 file in this folder to show your video here
-          </div>
-        </div>
-
-        <div class="sound-hint">Tap for sound</div>
-        <div class="sound-indicator" title="Tap for sound" role="button" tabindex="0" aria-label="Toggle sound">
-          <svg class="sound-icon-on" viewBox="0 0 24 24" style="display:none"><path d="M5 9v6h4l5 5V4L9 9H5zM16.5 12c0-1.77-1-3.29-2.5-4.03v8.06c1.5-.74 2.5-2.26 2.5-4.03zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-          <svg class="sound-icon-off" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.8L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="stack-grid">
-
-    <div class="stack-card">
-      <div class="stack-icon">💻</div>
-      <h3>Programming Languages</h3>
-      <div class="pill-row">
-        <span class="pill">Python</span>
-        <span class="pill">JavaScript</span>
-        <span class="pill">C#</span>
-        <span class="pill">Java</span>
-        <span class="pill">SQL</span>
-        <span class="pill">HTML/CSS</span>
-        <span class="pill">React</span>
-        <span class="pill">Assembly (MIPS)</span>
-      </div>
-    </div>
-
-    <div class="stack-card">
-      <div class="stack-icon">🤖</div>
-      <h3>AI &amp; Data</h3>
-      <div class="pill-row">
-        <span class="pill">LangChain</span>
-        <span class="pill">RAG</span>
-        <span class="pill">Prompt Engineering</span>
-        <span class="pill">Pandas</span>
-        <span class="pill">NumPy</span>
-        <span class="pill">Matplotlib</span>
-        <span class="pill">Scikit-learn</span>
-      </div>
-    </div>
-
-    <div class="stack-card">
-      <div class="stack-icon">🌐</div>
-      <h3>Web &amp; Frontend</h3>
-      <div class="pill-row">
-        <span class="pill">HTML</span>
-        <span class="pill">Bootstrap 5</span>
-        <span class="pill">Tailwind CSS</span>
-        <span class="pill">React</span>
-      </div>
-    </div>
-
-    <div class="stack-card">
-      <div class="stack-icon">⚙️</div>
-      <h3>Backend &amp; Frameworks</h3>
-      <div class="pill-row">
-        <span class="pill">Node.js</span>
-        <span class="pill">Express.js</span>
-        <span class="pill">Flask</span>
-        <span class="pill">.NET / WinForms</span>
-        <span class="pill">MVC Architecture</span>
-        <span class="pill">Streamlit</span>
-        <span class="pill">REST APIs</span>
-      </div>
-    </div>
-
-    <div class="stack-card">
-      <div class="stack-icon">🗄️</div>
-      <h3>Databases</h3>
-      <div class="pill-row">
-        <span class="pill">MS SQL Server</span>
-        <span class="pill">MongoDB</span>
-        <span class="pill">Firebase Firestore</span>
-      </div>
-    </div>
-
-    <div class="stack-card">
-      <div class="stack-icon">🧪</div>
-      <h3>Testing &amp; QA</h3>
-      <div class="pill-row">
-        <span class="pill">Selenium WebDriver</span>
-        <span class="pill">Postman (API Testing)</span>
-        <span class="pill">Manual &amp; Automation Testing</span>
-        <span class="pill">Test Case Design</span>
-        <span class="pill">Regression Testing</span>
-        <span class="pill">SDLC/STLC</span>
-      </div>
-    </div>
-
-    <div class="stack-card">
-      <div class="stack-icon">🛠️</div>
-      <h3>Tools &amp; Platforms</h3>
-      <div class="pill-row">
-        <span class="pill">Git</span>
-        <span class="pill">GitHub</span>
-        <span class="pill">Linux/Ubuntu</span>
-        <span class="pill">VS Code</span>
-        <span class="pill">Visual Studio 2022</span>
-        <span class="pill">Anaconda</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="projects-section" id="projects">
-  <div class="stack-header">
-    <div class="stack-badge">Portfolio</div>
-    <h2 class="stack-title">Featured <span>Projects</span></h2>
-    <p class="stack-sub">A selection of things I've built — from AI automation to full-stack platforms.</p>
-  </div>
-
-  <div class="projects-grid" id="projectsGrid">
-    <!-- Cards are injected by index.js from the projectsData array -->
-  </div>
-</section>
-
-<div class="modal-overlay" id="projectModalOverlay">
-  <div class="modal-panel">
-    <button class="modal-close" id="modalCloseBtn" aria-label="Close">&times;</button>
-    <div class="modal-content" id="modalContent">
-      <!-- Filled dynamically when a "Read More" button is clicked -->
-    </div>
-  </div>
-</div>
-
-<div class="project-modal-overlay" id="projectModalOverlay">
-  <div class="project-modal">
-    <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
-    <div class="modal-content" id="modalContent"></div>
-  </div>
-</div>
-
-<script src="index.js"></script>
-</body>
-</html>
+       
