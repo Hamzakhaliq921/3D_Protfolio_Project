@@ -46,4 +46,102 @@
           <span class="theme-icon-light" style="display:none">☀️</span>
         </button>
 
-       
+        <!-- Extended Interactive Color Palette Dropdown -->
+        <div class="color-palette-wrapper" id="colorPaletteWrapper">
+          <button class="color-palette-btn" id="paletteToggleBtn" aria-label="Choose Theme Color" title="Click to choose theme color">
+            <span class="palette-active-dot" id="activeColorDot"></span>
+            <span class="palette-text">Colors</span>
+            <span class="palette-chevron">▾</span>
+          </button>
+
+          <div class="color-palette-dropdown" id="colorPaletteDropdown">
+            <div class="palette-dropdown-header">
+              <span>Select Theme Accent</span>
+            </div>
+            <div class="palette-options-grid">
+              <button class="palette-option-item active" data-color="purple" style="--c:#8B5CF6">
+                <span class="color-swatch-dot" style="background:#8B5CF6"></span>
+                <span class="color-name">Purple</span>
+              </button>
+              <button class="palette-option-item" data-color="blue" style="--c:#3B82F6">
+                <span class="color-swatch-dot" style="background:#3B82F6"></span>
+                <span class="color-name">Blue</span>
+              </button>
+              <button class="palette-option-item" data-color="emerald" style="--c:#10B981">
+                <span class="color-swatch-dot" style="background:#10B981"></span>
+                <span class="color-name">Emerald</span>
+              </button>
+              <button class="palette-option-item" data-color="rose" style="--c:#F43F5E">
+                <span class="color-swatch-dot" style="background:#F43F5E"></span>
+                <span class="color-name">Rose</span>
+              </button>
+              <button class="palette-option-item" data-color="amber" style="--c:#F59E0B">
+                <span class="color-swatch-dot" style="background:#F59E0B"></span>
+                <span class="color-name">Amber</span>
+              </button>
+              <button class="palette-option-item" data-color="cyan" style="--c:#06B6D4">
+                <span class="color-swatch-dot" style="background:#06B6D4"></span>
+                <span class="color-name">Cyan</span>
+              </button>
+              <button class="palette-option-item" data-color="violet" style="--c:#6366F1">
+                <span class="color-swatch-dot" style="background:#6366F1"></span>
+                <span class="color-name">Indigo</span>
+              </button>
+              <button class="palette-option-item" data-color="crimson" style="--c:#E11D48">
+                <span class="color-swatch-dot" style="background:#E11D48"></span>
+                <span class="color-name">Crimson</span>
+              </button>
+              <button class="palette-option-item" data-color="teal" style="--c:#14B8A6">
+                <span class="color-swatch-dot" style="background:#14B8A6"></span>
+                <span class="color-name">Teal</span>
+              </button>
+              <button class="palette-option-item" data-color="orange" style="--c:#FF6B00">
+                <span class="color-swatch-dot" style="background:#FF6B00"></span>
+                <span class="color-name">Orange</span>
+              </button>
+              <button class="palette-option-item" data-color="lime" style="--c:#84CC16">
+                <span class="color-swatch-dot" style="background:#84CC16"></span>
+                <span class="color-name">Lime</span>
+              </button>
+              <button class="palette-option-item" data-color="magenta" style="--c:#EC4899">
+                <span class="color-swatch-dot" style="background:#EC4899"></span>
+                <span class="color-name">Magenta</span>
+              </button>
+              <button class="palette-option-item" data-color="sky" style="--c:#0EA5E9">
+                <span class="color-swatch-dot" style="background:#0EA5E9"></span>
+                <span class="color-name">Sky Blue</span>
+              </button>
+              <button class="palette-option-item" data-color="indigo" style="--c:#A855F7">
+                <span class="color-swatch-dot" style="background:#A855F7"></span>
+                <span class="color-name">Violet</span>
+              </button>
+              <button class="palette-option-item" data-color="yellow" style="--c:#EAB308">
+                <span class="color-swatch-dot" style="background:#EAB308"></span>
+                <span class="color-name">Gold</span>
+              </button>
+              <button class="palette-option-item" data-color="coral" style="--c:#FF4500">
+                <span class="color-swatch-dot" style="background:#FF4500"></span>
+                <span class="color-name">Coral</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#contact" class="btn-pill btn-cta">
+        <span>Let's Chat</span>
+        <span class="heart-icon">♡</span>
+      </a>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<script src="index.js"></script>
+</body>
+</html>
