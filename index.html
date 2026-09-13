@@ -6,10 +6,70 @@
 <title>Hamza Khaliq | Software Eng Student & Full-Stack Application Developer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Outfit:wght@800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
+<!-- Preloader Overlay with Liquid Wave "LOADING" Typography & Rich Ambient Animations -->
+<div id="siteLoader" class="site-loader-overlay" aria-label="Loading Portfolio">
+  <!-- Subtle Background Grid Pattern & Ambient Glow Orbs -->
+  <div class="loader-grid-bg"></div>
+  <div class="loader-ambient-glow"></div>
+
+  <div class="loader-top-bar">
+    <div class="loader-brand-pill">
+      <span class="loader-pulse-dot"></span>
+      <span class="loader-sub-logo">INITIALIZING EXPERIENCE</span>
+    </div>
+  </div>
+
+  <div class="loader-center-content">
+    <div class="loader-svg-wrapper">
+      <svg class="loader-svg" viewBox="0 0 1000 260" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <!-- SVG Text Mask for Liquid Wave Fill -->
+          <mask id="loader-text-mask" x="0" y="0" width="1000" height="260" maskUnits="userSpaceOnUse">
+            <rect width="1000" height="260" fill="#000000" />
+            <text x="500" y="145" text-anchor="middle" dominant-baseline="middle" class="loader-svg-text loader-mask-text">
+              Hamza
+            </text>
+          </mask>
+        </defs>
+
+        <!-- Base Dark Semi-transparent Muted Text -->
+        <text x="500" y="145" text-anchor="middle" dominant-baseline="middle" class="loader-svg-text loader-bg-text">
+          Hamza
+        </text>
+
+        <!-- Multi-Layered Liquid Wave Group clipped by Text Mask -->
+        <g mask="url(#loader-text-mask)">
+          <g id="loaderWaveGroup" class="loader-wave-group">
+            <!-- Accent glow ambient back wave -->
+            <path class="loader-wave-path loader-wave-accent" d="M 0,35 C 175,15 325,55 500,35 C 675,15 825,55 1000,35 C 1175,15 1325,55 1500,35 C 1675,15 1825,55 2000,35 L 2000,400 L 0,400 Z" />
+            <!-- Translucent depth middle wave -->
+            <path class="loader-wave-path loader-wave-back" d="M 0,35 C 150,10 350,60 500,35 C 650,10 850,60 1000,35 C 1150,10 1350,60 1500,35 C 1650,10 1850,60 2000,35 L 2000,400 L 0,400 Z" />
+            <!-- Crisp solid white front wave -->
+            <path class="loader-wave-path loader-wave-front" d="M 0,35 C 125,60 375,10 500,35 C 625,60 875,10 1000,35 C 1125,60 1375,10 1500,35 C 1625,60 1875,10 2000,35 L 2000,400 L 0,400 Z" />
+          </g>
+        </g>
+      </svg>
+      <div class="loader-counter-container">
+        <div class="loader-live-tag">
+          <span class="loader-spinner-mini"></span>
+          <span>LOADING ASSETS</span>
+        </div>
+        <span class="loader-counter-text"><span id="loaderPercent">0</span> %</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="loader-bottom-bar">
+    <div class="loader-mini-progress-track">
+      <div id="loaderMiniBar" class="loader-mini-progress-fill"></div>
+    </div>
+  </div>
+</div>
 
 <!-- HTML5 Interactive Background Canvas Particles -->
 <canvas id="bgParticlesCanvas"></canvas>
@@ -148,7 +208,7 @@
     <div class="hero-left">
       <div class="greeting-badge">
         <span class="status-pulse-dot"></span>
-        <span>Available for Work | Software Eng Student</span>
+        <span>Available for Work</span>
       </div>
 
       <h1 class="hero-main-title">
@@ -157,7 +217,7 @@
       </h1>
 
       <div class="typing-container">
-        <span class="typing-prefix">Software Eng Student |</span>
+        <span class="typing-prefix"></span>
         <span id="typed-text"></span>
         <span class="typing-cursor"></span>
       </div>
@@ -207,7 +267,7 @@
         </div>
 
         <!-- Avatar Circular Frame with Purple Aura Ring -->
-        <div class="avatar-glow-ring main-hero-avatar">
+        <div class="avatar-glow-ring main-hero-avatar" id="heroAvatarRing">
           <div class="avatar-block" id="heroAvatarBlock">
             <div class="avatar-frame">
               <video class="avatar-video" autoplay loop muted playsinline preload="auto">
@@ -245,7 +305,7 @@
 
     <!-- Tech Stack Avatar Block -->
     <div class="section-header-avatar">
-      <div class="avatar-glow-ring section-ring">
+      <div class="avatar-glow-ring section-ring" id="techAvatarRing">
         <div class="avatar-block" id="techAvatarBlock">
           <div class="avatar-frame">
             <video class="avatar-video" autoplay loop muted playsinline preload="auto">
@@ -273,6 +333,7 @@
     <button class="skill-tab" data-category="ai">AI &amp; Data</button>
     <button class="skill-tab" data-category="web">Web &amp; Backend</button>
     <button class="skill-tab" data-category="tools">Tools &amp; Databases</button>
+    <button class="skill-tab" data-category="testing">Testing &amp; QA</button>
   </div>
 
   <div class="stack-grid" id="skillsContainer">
@@ -339,10 +400,24 @@
       </div>
     </div>
 
+    <div class="stack-card" data-category="testing">
+      <div class="stack-card-header">
+        <div class="stack-icon-badge">🧪</div>
+        <h3>Testing &amp; Quality Assurance</h3>
+      </div>
+      <div class="pill-row">
+        <span class="pill-item" data-tech="Selenium WebDriver"><span class="pill-dot"></span>Selenium WebDriver</span>
+        <span class="pill-item" data-tech="TestNG"><span class="pill-dot"></span>TestNG</span>
+        <span class="pill-item" data-tech="Playwright"><span class="pill-dot"></span>Playwright</span>
+        <span class="pill-item" data-tech="Postman"><span class="pill-dot"></span>Postman</span>
+        <span class="pill-item" data-tech="RESTful APIs"><span class="pill-dot"></span>RESTful APIs</span>
+        <span class="pill-item" data-tech="Jira"><span class="pill-dot"></span>Jira</span>
+        <span class="pill-item" data-tech="TestRail"><span class="pill-dot"></span>TestRail</span>
+        <span class="pill-item" data-tech="Chrome DevTools"><span class="pill-dot"></span>Chrome DevTools</span>
+        <span class="pill-item" data-tech="Cross-Browser Testing"><span class="pill-dot"></span>Cross-Browser Testing</span>
+        <span class="pill-item" data-tech="Bug Tracking"><span class="pill-dot"></span>Bug Tracking</span>
+      </div>
+    </div>
+
   </div>
 </section>
-
-
-<script src="index.js"></script>
-</body>
-</html>
